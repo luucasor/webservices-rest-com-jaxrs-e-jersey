@@ -17,6 +17,10 @@ public class Carrinho {
 	private String rua;
 	private String cidade;
 	private long id;
+	
+	public String toXML(){
+		return new XStream().toXML(this);
+	}
 
 	public Carrinho adiciona(Produto produto) {
 		produtos.add(produto);
